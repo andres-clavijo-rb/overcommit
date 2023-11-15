@@ -15,14 +15,26 @@
 #
 # Uncomment the following lines to make the configuration take effect.
 
+PreRebase:
+  MergedCommit:
+    enabled: true
+
+PrePush:
+  Brakeman:
+    enabled: true
+  Rspec:
+    enabled: true
+
 PreCommit:
+  RubySyntax:
+    enabled: true
   RuboCop:
     enabled: true
-    on_warn: fail # Treat all warnings as failures
+    on_warn: fail
     problem_on_unmodified_line: ignore
   Fasterer:
     enabled: true
-    on_warn: fail # Treat all warnings as failures
+    on_warn: fail
     problem_on_unmodified_line: ignore
 
 CommitMsg:
