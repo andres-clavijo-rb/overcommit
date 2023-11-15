@@ -24,6 +24,17 @@ PreCommit:
     enabled: true
     on_warn: fail # Treat all warnings as failures
     problem_on_unmodified_line: ignore
+
+CommitMsg:
+  CapitalizedSubject:
+    enabled: false
+  EmptyMessage:
+    enabled: false
+  MessageFormat:
+    enabled: true
+    pattern: '^(?<type>\w+)\((?<issue>\w+-\d+)\): (?<description>.+)$'
+    sample_message: 'feat(AC-1645): refactor automatic-billing process'
+    expected_pattern_message: '<feature_type>(<subtask_id>): <message_or_description>'
 #
 #  TrailingWhitespace:
 #    enabled: true

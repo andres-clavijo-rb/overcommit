@@ -10,9 +10,9 @@ class User
 
   def role_name
     if admin?
-      'Admin'
+      :Admin
     else
-      'Regular'
+      :Regular
     end
   end
 end
